@@ -8,12 +8,17 @@
 	padding-top: 50px;
 }
 
+#quitartransparencia{
+	background-color: rgba(0, 0, 0, 0.5);
+    color:#000;
+
+}
+
 #transparencia{
+
 	background-color:rgb(255,0,0);
-	opacity:0.9; /* Opacidad 60% */
-	/*background-color:rgba(255,0,0,0.6); /* rgbA */
-	/*width:200px;
-	height:70px;*/
+	opacity:0.6; /*Uso actual*/
+
 }
 
 #enlace{
@@ -147,8 +152,7 @@ h5{
 	font-family: Sans-Pro;
 	color: #ffff00;
 	opacity: 0.6;
-
-
+	filter: alpha(opacity=50);/*IE*/
 }
 
 .main{
@@ -182,7 +186,12 @@ aside{
 }
 
 footer{
-	background: #16a085;
+	background: #009900;		
+	color: #fff;
+}
+
+.pie{
+	background: #009900;
 	color: #fff;
 }
 
