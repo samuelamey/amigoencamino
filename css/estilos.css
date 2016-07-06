@@ -24,7 +24,12 @@
 #enlace{
 	color: #ffffff;
 }
-
+.icon-bar {
+    height: 100%;
+    width: 90px;
+    text-align: center;
+    background-color: #555;
+}
 .parrafopru{
 	/*background: #bac7ad;*/
 	background: #006600;
