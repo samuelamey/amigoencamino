@@ -318,3 +318,10 @@ cambios
 	height:100px; 
 }
 
+iframe.ytb-embed {/*Para el video de youtube*/
+max-width: 96% !important;
+/*display: block;*/
+display: inline;
+margin: 10px auto;
+}
+
