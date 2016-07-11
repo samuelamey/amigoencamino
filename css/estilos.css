@@ -1,3 +1,9 @@
+@media (orientation: landscape) {
+	#landscape{
+		display: block;
+          }
+}
+
 @font-face{
 	font-family: Sans-Pro
 	src:url(Colores_TipoLetra.ttf);
