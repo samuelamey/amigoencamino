@@ -164,6 +164,13 @@ h5{
 	color: #ffff00;
 	opacity: 0.6;
 	filter: alpha(opacity=50);/*IE*/
+
+}
+.fontsmall{
+	font-size: small;
+}
+.fontlarge{
+	font-size: medium;
 }
 
 .main{
