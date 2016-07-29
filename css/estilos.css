@@ -338,3 +338,29 @@ display: inline;
 margin: 10px auto;
 }
 
+.mi-iframe{
+	width: 250px;
+	height: 125px;
+}
+
+@media(min-width: 320px){
+	.mi-iframe{
+		width: 250px;
+		height: 125px;
+	}
+
+}
+
+@media(min-width: 800px){
+	.mi-iframe{
+		width: 600px;
+		height: 400px;
+	}
+}
+
+@media(min-width: 600px){
+	.mi-iframe{
+		width: 400px;
+		height: 200px;
+	}
+}
