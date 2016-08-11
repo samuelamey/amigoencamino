@@ -1,9 +1,9 @@
 <?php
 if(isset($_GET['email'])) {
 
-$email_to = "samuelamey@gmail.com"; /*--------------------Cambiar----------------*/
-//$email_to = "depositobelmonte@gmail.com"; /*--------------------Cambiar----------------*/
-$email_subject = "Datos de contacto Web Belmonte";
+//$email_to = "samuelamey@gmail.com"; /*--------------------Cambiar----------------*/
+$email_to = "forenex60@gmail.com"; /*--------------------Cambiar----------------*/
+$email_subject = "Datos de contacto Web amigoencamino";
 
 if(!isset($_GET['name']) ||
 !isset($_GET['numero']) ||
@@ -11,7 +11,7 @@ if(!isset($_GET['name']) ||
 !isset($_GET['comments'])) {
 
 echo "<b>Error, el formulario no ha sido enviado. </b>";
-echo "<b>Por favor, vuelva atr�s<br/>";
+echo "<b>Por favor, vuelva atras<br/>";
 die();
 }
 
@@ -21,8 +21,8 @@ $email_message .= "Telefono: " . $_GET['numero'] . "\n";
 $email_message .= "Email: " . $_GET['email'] . "\n";
 $email_message .= "Comentarios: " . $_GET['comments'] . "\n\n";
 
-$email_from = 'administrador <samuelamey@gmail.com>';
-//$email_from = 'administrador <depositobelmonte@gmail.com>';
+//$email_from = 'administrador <samuelamey@gmail.com>';
+$email_from = 'administrador <forenex60@gmail.com>';
 
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
@@ -33,92 +33,190 @@ $headers = 'From: '.$email_from."\r\n".
 ?>
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<title>DEPOSITO BELMONTE Contactenos</title>
+  <head>
+	<title>Contáctenos</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="Deposito Belmonte, depositobelmonte, maderas, almendro, pino, teca, formaleta">	
-	<meta name="description" content="Deposito Belmonte - Todo en Maderas Cont�ctenos 2265-1672 - 2265-1673 - 2265-1674">
+	<meta name="keywords" content="Amigo en Camino, amigoencamino, amigo, camino, costa, turismo">	
+	<meta name="description" content="Amigo en Camino - Contáctenos (+506) 2266-0054">
 	<meta name="author" content="Samuel Amey">
-	<link href="../images/logop.jpg" type="image/x-icon" rel="shortcut icon" />	
-	<!-- Bootstrap -->		
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<link href="../img/manigordos/icono.jpg" type="image/x-icon" rel="shortcut icon" />
+	
 	<!--other JavaScript-->
-	<script type="text/javascript" src="../js/validaContactenos.js"></script>
-	<!-- Custom Theme files -->
-	<link href="../css/contact.css" rel='stylesheet' type='text/css' />
-	<link href="../css/animate.css" rel='stylesheet' type='text/css'>
-	<link href="../css/style-basicm.css" rel='stylesheet' type='text/css' />
-</head>
-<body>
-
-		<nav class="navbar navbar-inverse" id="barranavegacion" >
-		  <div class="container-fluid">
-			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>                        
-			  </button>
-			  <a class="navbar-brand" href="../index.html"><font color="white">DEPOSITO BELMONTE</font></a>
-			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
-			  <ul class="nav navbar-nav">
-				<li><a href="../index.html"><font color="white">Inicio</font></a></li>
-				<li class="dropdown">
-				  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><font color="white">Maderas</font><span class="caret"></span></a>
-				  <ul class="dropdown-menu">
-					<li><a href="../almendro.html">Almendro</a></li>
-					<li class="divider"></li>
-					<li><a href="../pinoimportado.html">Pino Importado</a></li>
-					<li class="divider"></li>
-					<li><a href="../teca.html">Teca</a></li>
-					<li class="divider"></li>
-					<li><a href="../semidurosyformaleta.html">Semiduros y Formaleta</a></li>
-				  </ul>
-				</li>
-			  </ul>
-			  <ul class="nav navbar-nav navbar-right">
-				<li><a href="../contactus_en.html"><span class="glyphicon"><img class="img-responsive" src="../images/USAFLAG.png" alt="usaFlag" width="15" height="10"></span><font color="white"> English</font></a></li>
-				<li class="active"><a href="../contactenos.html"><font color="white">Cont&aacute;ctenos</font></a></li>
-			  </ul>			  
-			</div>
-		  </div>
-		</nav>
+	<script type="text/javascript" src="js/validaContactenos.js"></script>	
 	
-	<div class="animated rubberBand">
-		<div class="page-header">
-			<div class="container">
-				<div class="text-center">
-					<img src="../images/logo.png" class="img-responsive center-block" alt="Responsive image">
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/index2.css" rel="stylesheet">
+    <link href="../css/estilos.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/darkbox.css" type="text/css">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+    
+    	<div align="right">
+    		<a href="../contact_us.html"><img src="../img/img/usaflag.png" width="30px" alt="ENGLISH"></a>English
+			<a href="../contact_ru.html"><img src="../img/img/russiaflag.png" width="30px" alt="русский"></a>Pусский
+		</div>
+
+		<div class="row">
+        	<div class="col-xs-12"><img src="../img/inicio/letrasm.png" class="img-responsive" id="patito"/></div>
+        </div>    
+
+		<div class="row">
+        <div class="col-sm-4 col-md-3">
+					<div class="sidebar-nav col-sm-12">
+					  <div class="navbar navbar-den col-sm-12 " role="navigation">
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						  <span class="visible-xs navbar-brand">Menu</span>
+						</div>
+						<div class="navbar-collapse collapse sidebar-navbar-collapse">
+						  <ul class="nav navbar-nav">
+							<li><img class="imglogo" src="../img/manigordos/CONTACTOm.png" alt="LOGO" class="img-responsive" ></li>
+							<li><a href="http://www.amigoencamino.com/index.html">Inicio</a></li>
+							<li><a href="http://www.amigoencamino.com/arteygaleria.html">Arte y Galería</a></li>
+							<li><a href="http://www.amigoencamino.com/posadavillacamilo.html">Posada Ville Camille</a></li>
+							<li><a href="http://www.amigoencamino.com/derechoshumanos.html">Derechos Humanos</a></li>
+							<li><a href="http://www.amigoencamino.com/radiobarva.html">Radio Barva</a></li>
+							<li class="active"><a href="http://www.amigoencamino.com/contactenos.html">Contáctenos</a></li>
+						  </ul>
+						</div><!--/.nav-collapse -->
+					  </div>
+					</div>
+			</div>
+          <div class="col-sm-8 col-md-9">
+			<div class="hidden-xs col-sm-12 col-md-12 col-lg-12 text-justify parrafo3">
+			  <font>
+				<center><font><h1>INTERCAMBIO EN COSTA RICA</h1></font></center>
+				<p>Si deseas hacerlo o acercarte a un país hermoso, pequeño y caluroso humanamente, no dejes de escribirnos.</p>
+				<p align="center" ><font color="white">www.amigoencamino.com</font></p>
+				<p>Posada Ville Camille, es un lugar de encuentro, rodeado de naturaleza, con paisajes casi perfectos, un clima exquisito que oscila entre los 22 y 25 grados centígrados; la salida del sol se manifiesta a las 5:17 y la puesta del sol a las 17:49 horas, en verano su clima es con sol constante y en el invierno algún chubasco y tormentas.</p>
+				<p>Si realmente deseas visitarnos por un tiempo, 30 días o más coméntanos sobre su interés, la idea es que una vez concluida su visita alguna persona costarricense pueda hacerlo de la misma manera en su país de origen.</p>
+				<p>Contamos con su habitación, y todas las comodidades de internet, televisión, lavado de ropa y compartir en familia; visitas a patrimonios, paseos en un ambiente tranquilo, paz y si su interés es aprender español, dese esta oportunidad.</p>
+				<p>No estamos interesados en que haga ninguna derogación económica, administre su dinero, haga sus compras de alimentación y llegamos a un arreglo por su permanencia en el país de manera económica y acorde a su bolsillo.</p>		
+				<p>Costa Rica, país de aventura y sueños, terminara con nostalgia al saber que deja un pedacito de su corazón en nuestro terruño, atrévase a diseñar su viaje y pensar cómo podría recibir a un costarricense en su hogar, el tiempo corre y recuerde recibimos gente de 0 a 100 años, su edad es un asunto del destino.</p>
+				<p>Hablamos inglés, portugués, ruso y castellano, entra en nuestro mundo de aventura y en nuestro nido de encuentro, deposita un poco tuyo para expandir deseos de amistad, solidaridad y caminar de la mano en la práctica de los Derechos Humanos.</p>
+				<p>Gracias por preferirnos… tendrá un amigo en camino, San José de la Montaña te espera!!!</p>
+				<br>
+			   </font>
+			</div>
+
+				<div class="hidden-sm hidden-md hidden-lg text-justify parrafo3">
+			  	<font>
+				<center data-toggle="collapse" data-target="#int"><font><h1>INTERCAMBIO EN COSTA RICA <h5 class="glyphicon glyphicon-menu-down"></h5></h1></font></center>
+				<div id="int" class="collapse">
+					<p>Si deseas hacerlo o acercarte a un país hermoso, pequeño y caluroso humanamente, no dejes de escribirnos.</p>
+					<p align="center" ><font color="white">www.amigoencamino.com</font></p>
+					<p>Posada Ville Camille, es un lugar de encuentro, rodeado de naturaleza, con paisajes casi perfectos, un clima exquisito que oscila entre los 22 y 25 grados centígrados; la salida del sol se manifiesta a las 5:17 y la puesta del sol a las 17:49 horas, en verano su clima es con sol constante y en el invierno algún chubasco y tormentas.</p>
+					<p>Si realmente deseas visitarnos por un tiempo, 30 días o más coméntanos sobre su interés, la idea es que una vez concluida su visita alguna persona costarricense pueda hacerlo de la misma manera en su país de origen.</p>
+					<p>Contamos con su habitación, y todas las comodidades de internet, televisión, lavado de ropa y compartir en familia; visitas a patrimonios, paseos en un ambiente tranquilo, paz y si su interés es aprender español, dese esta oportunidad.</p>
+					<p>No estamos interesados en que haga ninguna derogación económica, administre su dinero, haga sus compras de alimentación y llegamos a un arreglo por su permanencia en el país de manera económica y acorde a su bolsillo.</p>		
+					<p>Costa Rica, país de aventura y sueños, terminara con nostalgia al saber que deja un pedacito de su corazón en nuestro terruño, atrévase a diseñar su viaje y pensar cómo podría recibir a un costarricense en su hogar, el tiempo corre y recuerde recibimos gente de 0 a 100 años, su edad es un asunto del destino.</p>
+					<p>Hablamos inglés, portugués, ruso y castellano, entra en nuestro mundo de aventura y en nuestro nido de encuentro, deposita un poco tuyo para expandir deseos de amistad, solidaridad y caminar de la mano en la práctica de los Derechos Humanos.</p>
+					<p>Gracias por preferirnos… tendrá un amigo en camino, San José de la Montaña te espera!!!</p>
+					<br>
 				</div>
+			   </font>
 			</div>
-		</div>
-	</div>
-	
-<div class="main">	
-	<div class="container">
-		 <div class="container-fluid bg-grey">
-		  <h2 class="text-center">Cont&aacute;ctenos</h2>
-		  <div class="row">
-			<h6 class="text-center">Gracias por su preferencia, en breve un miembro de nuestro personal se pondr&aacute; en contacto con usted.</h6>
+
+			<div><p class="espacio">.  </p></div>
+			
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 parrafo3"><!--Formulario-->
+			<!--<div>-->
+				<center><font><h1>Gracias por contactarnos, en breve le responderemos</h1></font></center>
+			</div><!--Formulario-->
+			
+			<div><p class="espacio">.  </p></div>
+				<div> <!--Carrousel-->
+					<div align="center" id="myCarousel" class="carousel slide col-xs-12 hidden-sm col-md-12 col-lg-12" data-ride="carousel">		
+						<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item active animated fadeInLeft">
+									<img src="../img/contactenos/Cartin & Ernie 1993 ECC_m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Cartin & Ernie 1993 ECC_m.jpg"
+									data-darkbox-description="<b>Cartin & Ernie 1993</b> ">
+								</div>
+								<div class="item animated fadeInLeft">
+									<img src="../img/contactenos/Caída Catarata, Ernie, 2011_2m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Caída Catarata, Ernie, 2011_2m.jpg"
+									data-darkbox-description="<b>Caída Catarata, Ernie, 2011</b> ">
+								</div>
+								<div class="item animated fadeInLeft">
+									<img src="../img/contactenos/Corazón de León_3m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Corazón de León_3m.jpg"
+									data-darkbox-description="<b>Corazón de León</b> ">
+								</div>
+								<div class="item animated fadeInLeft">
+									<img src="../img/contactenos/Ernie Deck_4m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Ernie Deck_4m.jpg"
+									data-darkbox-description="<b>Ernie Deck</b> ">
+								</div>
+								<div class="item animated fadeInLeft">
+									<img src="../img/contactenos/Ernie piedras Catarata, 2011_5m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Ernie piedras Catarata, 2011_5m.jpg"
+									data-darkbox-description="<b>Ernie piedras Catarata, 2011</b> ">
+								</div>
+								<div class="item animated fadeInLeft">
+									<img src="../img/contactenos/Iron Maiden airplane_6m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Iron Maiden airplane_6m.jpg"
+									data-darkbox-description="<b>Iron Maiden airplane</b> ">
+								</div>								
+								<div class="item animated fadeInLeft">
+									<img src="../img/contactenos/1985 con Ignacio Carballo lectura texto en Tibasm.jpg" class="carimg"
+									data-darkbox="../img/contactenos/1985 con Ignacio Carballo lectura texto en Tibasm.jpg"
+									data-darkbox-description="<b>1985 con Ignacio Carballo lectura texto</b> ">
+								</div>								
+							</div>
+							<!-- Left and right controls -->
+										<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+											<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+											<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>	
+						</div>
+
+				</div><!--Carrousel-->				
 		  </div>
-		</div>
-	</div>
-</div>
-		<div class="col-xs-12 footer_bottom">
-			<div class="pie_pagina">
-				<h2 align="center" >AGROPECUARIA GASCA Y CABRERA K.A.O.S.A.</h2>
-				<h6 align="center" >&copy; DEPOSITO BELMONTE - Todos los Derechos 2016 - Desarrollado por <a href="http://ticatico.net/"><font color="red">Ticatico.net</font></a></h6>
+		  
+        </div>
+		
+				<br class="hidden-xs">
+				<br class="hidden-xs">
+				<br class="hidden-xs">
+    </div><!-- /.container -->
+	<div><p class="espacio">.  </p></div>
+	<footer>
+		<div class="col-sm-12 pie">
+			<div align="center" class="col-sm-4">
+				Diseñado por Samuel Amey	
 			</div>
-		</div>
-		<div>&nbsp;</div>
-</body>
+			<div align="center" class="col-sm-4">
+				Derechos Reservados ® 2016	
+			</div>
+			<div align="center" class="col-sm-4">
+				Ernie Camacho-Soto	
+			</div>	
+		</div> 
+	</footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/darkbox.js"></script>
+  </body>
 </html>
-
-
-
 
