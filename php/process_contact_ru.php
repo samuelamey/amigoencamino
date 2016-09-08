@@ -1,22 +1,53 @@
+<?php
+if(isset($_GET['email'])) {
+
+$email_to = "forenex60@gmail.com"; 
+$email_subject = "Друг информация о пути контакта";
+
+if(!isset($_GET['name']) ||
+!isset($_GET['numero']) ||
+!isset($_GET['email']) ||
+!isset($_GET['comments'])) {
+
+echo "<b>Ошибка, форма не была отправлена. </b>";
+echo "<b>Пожалуйста, вернитесь на последнюю страницу<br/>";
+die();
+}
+
+$email_message = "Contact information details:\n\n";
+$email_message .= "Name: " . $_GET['name'] . "\n";
+$email_message .= "Phone: " . $_GET['numero'] . "\n";
+$email_message .= "Email: " . $_GET['email'] . "\n";
+$email_message .= "Comments and reservations: " . $_GET['comments'] . "\n\n";
+
+$email_from = 'administrador <forenex60@gmail.com>';
+
+$headers = 'From: '.$email_from."\r\n".
+'Reply-To: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);
+
+}
+?>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
 	<title>Свяжитесь с нами</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="Amigo en Camino, amigoencamino, amigo, camino, costa, туризм">	
-	<meta name="description" content="Amigo en Camino - контакт (+506) 2266-0054">
+	<meta name="keywords" content="Amigo en Camino, amigoencamino, amigo, camino, costa, turismo">	
+	<meta name="description" content="Amigo en Camino - Contáctenos (+506) 2266-0054">
 	<meta name="author" content="Samuel Amey">
-	<link href="img/manigordos/icono.jpg" type="image/x-icon" rel="shortcut icon" />
+	<link href="../img/manigordos/icono.jpg" type="image/x-icon" rel="shortcut icon" />
 	
 	<!--other JavaScript-->
 	<script type="text/javascript" src="js/validaContactenos.js"></script>	
 	
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/index2.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/darkbox.css" type="text/css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/index2.css" rel="stylesheet">
+    <link href="../css/estilos.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/darkbox.css" type="text/css">
 
   </head>
 
@@ -25,16 +56,16 @@
     <div class="container">
     
     	<div align="right">
-			<a href="contactenos.html"><img src="img\img\spainflag.png" width="30px" alt="Español"></a>Español
-    		<a href="contact_us.html"><img src="img\img\usaflag.png" width="30px" alt="English"></a>English
+			<a href="../contactenos.html"><img src="../img/img/spainflag.png" width="30px" alt="Español"></a>Español
+			<a href="../contact_us.html"><img src="../img/img/usaflag.png" width="30px" alt="English"></a>English
 		</div>
-
+		
 		<div class="row">
-        	<div class="col-xs-12"><img src="img/inicio/letrasm.png" class="img-responsive" id="patito"/></div>
+        	<div class="col-xs-12"><img src="../img/inicio/letrasm.png" class="img-responsive" id="patito"/></div>
         </div>    
 
 		<div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4 col-md-3">
 					<div class="sidebar-nav col-sm-12">
 					  <div class="navbar navbar-den col-sm-12 " role="navigation">
 						<div class="navbar-header">
@@ -48,19 +79,19 @@
 						</div>
 						<div class="navbar-collapse collapse sidebar-navbar-collapse">
 						  <ul class="nav navbar-nav">
-							<li><img class="imglogo" src="img/manigordos/CONTACTOm.png" alt="LOGO" class="img-responsive" ></li>
-							<li><a href="index_ru.html">инициирование</a></li>
-							<li><a href="arteygaleria.html">Искусство и Галерея</a></li>
-							<li><a href="villecamile_ru.html">Посада Ville Camille</a></li>
-							<li><a href="derechoshumanos.html">Права человека</a></li>
-							<li><a href="radiobarva.html">Радио Barva</a></li>
-							<li class="active"><a href="contact_ru.html">Свяжитесь с нами</a></li>
+							<li><img class="imglogo" src="../img/manigordos/CONTACTOm.png" alt="LOGO" class="img-responsive" ></li>
+							<li><a href="../index_ru.html">инициирование</a></li>
+							<li><a href="../arteygaleria.html">Искусство и Галерея</a></li>
+							<li><a href="../villecamile_ru.html">Посада Ville Camille</a></li>
+							<li><a href="../derechoshumanos.html">Права человека</a></li>
+							<li><a href="../radiobarva.html">Радио Barva</a></li>
+							<li class="active"><a href="../contact_ru.html">Свяжитесь с нами</a></li>							
 						  </ul>
 						</div><!--/.nav-collapse -->
 					  </div>
 					</div>
 			</div>
-          <div class="col-sm-8">
+          <div class="col-sm-8 col-md-9">
 			<div class="hidden-xs col-sm-12 col-md-12 col-lg-12 text-justify parrafo3">
 			  <font>
 				<center><font><h1>ОБМЕН С КОСТА-РИКОЙ</h1></font></center>
@@ -107,29 +138,7 @@
 			
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 parrafo3"><!--Formulario-->
 			<!--<div>-->
-				<center><font color = "#ffffff"><h1>Свяжитесь с нами</h1></font></center>
-				<form action="php/process_contact_ru.php" method="get" name="contact_form" >
-				  <div class="row">
-					<div class="col-sm-6 form-group">
-					  <input class="form-control" id="name" name="name" placeholder="имя:" type="text" required />
-					</div>
-					<div class="col-sm-6 form-group">
-					  <input class="form-control" id="numero" name="numero" placeholder="телефон:" type="text" onkeypress="return isNumberKey(event)" required />
-					</div>
-				  </div>
-				  <div class="row">
-					<div class="col-sm-12 form-group">
-						<input class="form-control" id="email" name="email" placeholder="электронная почта:" type="email" required />
-					</div>
-				  </div>			  
-				  <textarea class="form-control" id="comments" name="comments" placeholder="Комментарии и оговорки:" rows="5"></textarea>
-				  <br>
-				  <div class="row">
-					<div class="col-sm-12 form-group">
-					  <button class="btn btn-default pull-right" id="enviar" type="submit">послать</button>
-					</div>
-				  </div>
-				</form>				
+				<center><font><h1>Спасибо, мы будем связываться с Вами как можно скорее.</h1></font></center>
 			</div><!--Formulario-->
 			
 			<div><p class="espacio">.  </p></div>
@@ -138,38 +147,38 @@
 						<!-- Wrapper for slides -->
 							<div class="carousel-inner" role="listbox">
 								<div class="item active animated fadeInLeft">
-									<img src="img/contactenos/Cartin & Ernie 1993 ECC_m.jpg" class="carimg"
-									data-darkbox="img/contactenos/Cartin & Ernie 1993 ECC_m.jpg"
+									<img src="../img/contactenos/Cartin & Ernie 1993 ECC_m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Cartin & Ernie 1993 ECC_m.jpg"
 									data-darkbox-description="<b>Cartin & Ernie 1993</b> ">
 								</div>
 								<div class="item animated fadeInLeft">
-									<img src="img/contactenos/Caída Catarata, Ernie, 2011_2m.jpg" class="carimg"
-									data-darkbox="img/contactenos/Caída Catarata, Ernie, 2011_2m.jpg"
+									<img src="../img/contactenos/Caída Catarata, Ernie, 2011_2m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Caída Catarata, Ernie, 2011_2m.jpg"
 									data-darkbox-description="<b>Caída Catarata, Ernie, 2011</b> ">
 								</div>
 								<div class="item animated fadeInLeft">
-									<img src="img/contactenos/Corazón de León_3m.jpg" class="carimg"
-									data-darkbox="img/contactenos/Corazón de León_3m.jpg"
+									<img src="../img/contactenos/Corazón de León_3m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Corazón de León_3m.jpg"
 									data-darkbox-description="<b>Corazón de León</b> ">
 								</div>
 								<div class="item animated fadeInLeft">
-									<img src="img/contactenos/Ernie Deck_4m.jpg" class="carimg"
-									data-darkbox="img/contactenos/Ernie Deck_4m.jpg"
+									<img src="../img/contactenos/Ernie Deck_4m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Ernie Deck_4m.jpg"
 									data-darkbox-description="<b>Ernie Deck</b> ">
 								</div>
 								<div class="item animated fadeInLeft">
-									<img src="img/contactenos/Ernie piedras Catarata, 2011_5m.jpg" class="carimg"
-									data-darkbox="img/contactenos/Ernie piedras Catarata, 2011_5m.jpg"
+									<img src="../img/contactenos/Ernie piedras Catarata, 2011_5m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Ernie piedras Catarata, 2011_5m.jpg"
 									data-darkbox-description="<b>Ernie piedras Catarata, 2011</b> ">
 								</div>
 								<div class="item animated fadeInLeft">
-									<img src="img/contactenos/Iron Maiden airplane_6m.jpg" class="carimg"
-									data-darkbox="img/contactenos/Iron Maiden airplane_6m.jpg"
+									<img src="../img/contactenos/Iron Maiden airplane_6m.jpg" class="carimg"
+									data-darkbox="../img/contactenos/Iron Maiden airplane_6m.jpg"
 									data-darkbox-description="<b>Iron Maiden airplane</b> ">
 								</div>								
 								<div class="item animated fadeInLeft">
-									<img src="img/contactenos/1985 con Ignacio Carballo lectura texto en Tibasm.jpg" class="carimg"
-									data-darkbox="img/contactenos/1985 con Ignacio Carballo lectura texto en Tibasm.jpg"
+									<img src="../img/contactenos/1985 con Ignacio Carballo lectura texto en Tibasm.jpg" class="carimg"
+									data-darkbox="../img/contactenos/1985 con Ignacio Carballo lectura texto en Tibasm.jpg"
 									data-darkbox-description="<b>1985 con Ignacio Carballo lectura texto</b> ">
 								</div>								
 							</div>
@@ -212,7 +221,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/darkbox.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/darkbox.js"></script>
   </body>
 </html>
+
