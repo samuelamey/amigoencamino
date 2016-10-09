@@ -1,8 +1,7 @@
 <?php
 if(isset($_GET['email'])) {
 
-//$email_to = "samuelamey@gmail.com"; /*--------------------Cambiar----------------*/
-$email_to = "forenex60@gmail.com"; /*--------------------Cambiar----------------*/
+$email_to = "admin@amigoencamino.com, amy@amigoencamino.com"; 
 $email_subject = "amigoencamino information contact";
 
 if(!isset($_GET['name']) ||
@@ -21,8 +20,7 @@ $email_message .= "Phone: " . $_GET['numero'] . "\n";
 $email_message .= "Email: " . $_GET['email'] . "\n";
 $email_message .= "Comments and reservations: " . $_GET['comments'] . "\n\n";
 
-//$email_from = 'administrador <samuelamey@gmail.com>';
-$email_from = 'administrador <forenex60@gmail.com>';
+$email_from = 'administrador <admin@amigoencamino.com>';
 
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
